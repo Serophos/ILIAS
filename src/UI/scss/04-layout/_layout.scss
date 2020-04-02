@@ -1,0 +1,426 @@
+// from standardpage.less
+// main grid without slates
+// **
+.il-layout-page {
+	background: $body-bg;
+	display: grid;
+	grid-gap: 0px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: $il-standard-page-header-height $il-standard-page-breadcrumbs-height 1fr;
+    height: 100%;
+	overflow: hidden;
+	width: 100%;
+	.il-maincontrols-mainbar {
+		.il-mainbar-close-slates {
+			display: none;
+		}
+	}
+	// main grid with active slates
+	&.with-mainbar-slates-engaged {
+		grid-template-columns: auto 1fr;
+		.il-maincontrols-mainbar {
+			width: $il-standard-page-slate-width + $il-mainbar-btn-width;
+
+			// mainbar slate
+			.il-mainbar-slates {
+				display: flex;
+				flex-direction: column;
+				z-index: $il-standard-page-zindex-mainbar-slates;
+				.il-maincontrols-slate {
+					overflow-y: auto;
+					-webkit-overflow-scrolling: touch;
+					min-height: 0;
+				}
+			}
+			// show slate remove btn
+			.il-mainbar-close-slates {
+				display: flex;
+			}
+		}
+	}
+}
+
+// metabar
+header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 1;
+	z-index: $il-standard-page-zindex-header;
+}
+
+// head-container with logo pagetitle and metabar
+.header-inner {
+    align-items: center;
+    background: $il-standard-page-header-bg-color;
+    display: flex;
+    flex-direction: row;
+    height: $il-standard-page-header-height;
+    padding: 0 15px;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+}
+
+// logo-container
+.il-logo {
+	width: 50%; // needs further attention because of added pagetitle
+	height: $il-standard-page-logo-height;
+	justify-self: start;
+	display: flex;
+  	align-items: center;
+}
+
+.il-pagetitle {
+	font-weight: 600;
+	display: flex;
+	font-size: $font-size-base * 1.142;
+	align-items: flex-end;
+	padding-left: 35px; // dynamic value desirable
+}
+
+// mainbar
+nav.il-maincontrols {
+	grid-column: 1;
+	grid-row: 3;
+	z-index: $il-standard-page-zindex-maincontrols;
+}
+
+// Subgrid mainbar
+.il-maincontrols-mainbar {
+	background-color: $il-maincontrols-mainbar-bg-color;
+	display: grid;
+	height: 100%;
+	grid-template-columns: $il-mainbar-btn-width $il-standard-page-slate-width;
+	grid-template-rows: 1fr;
+	width: $il-mainbar-btn-width;
+	&.engaged {
+
+	}
+}
+
+// mainbar
+.il-mainbar {
+	background-color: $il-mainbar-btn-bg-color;
+	grid-column: 1;
+	grid-row: 1;
+	.shadow-right();
+	z-index: $il-standard-page-zindex-mainbar;
+
+}
+
+// tools section
+.il-mainbar-tools-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.il-mainbar-tools-button button {
+	height:$il-mainbar-btn-height;
+	width: $il-mainbar-btn-width;
+}
+
+.il-mainbar-tools-entries {
+	button {
+		height:$il-mainbar-btn-height;
+		width: $il-mainbar-btn-width;
+	}
+	&.engaged {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+// mainbar triggers
+.il-mainbar-triggers {
+}
+
+// mainbar slates
+.il-mainbar-slates {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+// content
+main {
+	display: block;
+}
+
+.il-layout-page-content {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-column: 2;
+	grid-row: 3;
+	overflow: auto;
+}
+
+// footer
+footer {
+	background-color: $brand-primary;
+	min-height: auto;
+	padding: $il-footer-padding;
+	text-align: center;
+	z-index: 2;
+}
+
+
+/*
+**************************************************************
+       mobile Layout
+**************************************************************
+*/
+
+// Sidepanel in right column under content
+//
+#il_right_col {
+	$media (min-width: $grid-float-breakpoint) {
+		padding-left: 0; //See: #https://mantis.ilias.de/view.php?id=27109
+	}
+}
+$media only screen and (max-width: ($screen-lg-desktop - 1px)) {
+	.il-layout-page.with-mainbar-slates-engaged {
+		#il_right_col {
+			padding-left: 15px;
+		}
+	}
+}
+
+$media only screen and (max-width: ($screen-lg-desktop - 1px)) {
+	.il-layout-page.with-mainbar-slates-engaged {
+		#il_center_col.col-sm-9{
+			padding-right: 15px;
+		}
+		#il_center_col.col-sm-9,
+		#il_right_col.col-sm-3 {
+			float: none !important;
+			width: 100% !important;
+		}
+	}
+}
+
+$media only screen and (max-width: $grid-float-breakpoint-max) {
+	// main grid without slates
+	.il-layout-page {
+		background: $body-bg;
+		display: grid;
+		grid-gap: 0px;
+	    grid-template-columns: 1fr;
+	    grid-template-rows: $il-standard-page-small-header-height 1fr;
+	    height: 100%;
+		overflow: hidden;
+		width: 100%;
+		.nav.il-maincontrols {
+			.il-maincontrols-mainbar {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: 0 $il-standard-page-small-mainbar-height;
+
+				.il-mainbar-close-slates {
+					display: none;
+				}
+				.il-mainbar {
+					grid-column: 1;
+					grid-row: 2;
+					.shadow-top();
+				}
+				.il-mainbar-slates {
+					grid-column: 1;
+					grid-row: 1;
+				}
+			}
+		}
+		&.with-mainbar-slates-engaged {
+			grid-template-columns: 1fr;
+			.nav.il-maincontrols {
+				grid-column: 1;
+				grid-row: 2;
+				height: 100%; // calc(100% - ($il-standard-page-small-header-height + $il-standard-page-breadcrumbs-height);
+				.il-maincontrols-mainbar {
+				    grid-template-columns: 1fr;
+				    grid-template-rows: 1fr $il-standard-page-small-mainbar-height;
+					width: 100%;
+					.il-mainbar {
+						.shadow-top();
+					}
+					// slate
+					.il-mainbar-slates {
+						grid-column: 1;
+						grid-row: 1;
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						z-index: $il-standard-page-zindex-mainbar-slates;
+						.il-maincontrols-slate {
+							overflow-y: auto;
+						}
+					}
+					// show slate remove btn
+					.il-mainbar-close-slates {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	// metabar
+	header {
+		grid-column: 1;
+		grid-row: 1;
+		z-index: $il-standard-page-zindex-header;
+	}
+
+	// head-container with logo and metabar
+	.header-inner {
+	    height: $il-standard-page-small-header-height;
+	    padding: 0;
+	    width: 100%;
+		.shadow-bottom();
+	}
+
+	// mobile logo
+	.il-logo {
+		width: $il-logo-resp-width;
+	}
+
+	// pagetitle
+	.il-pagetitle {
+		display: none;
+	}
+
+	// breadcrumbs
+	.breadcrumbs {
+		display: none;
+	}
+
+	.il-header-locator {
+		.dropdown {
+			position: static;
+		}
+		.open>.dropdown-menu {
+			top: $il-standard-page-small-header-height - 1;
+			width: 100%;
+		}
+
+		.dropdown-toggle {
+			background-color: transparent;
+			border: none;
+			color: $gray;
+			font-size: 1.5rem;
+			max-width: 220px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			&:before {
+			    content: " \e606";
+			    font-family: "il-icons";
+			    font-size: 1.8rem;
+			    margin-right: 10px;
+			}
+		}
+
+		.open .dropdown-toggle:before {
+			content: " \e604";
+		}
+		.btn-default:active:hover,
+		.btn-default:active:focus,
+		.open>.dropdown-toggle.btn-default,
+		.open>.dropdown-toggle.btn-default:hover
+		.open>.dropdown-toggle.btn-default:active,
+		.open>.dropdown-toggle.btn-default:active:hover,
+		.open>.dropdown-toggle.btn-default:active:focus {
+			background: $il-standard-page-header-bg-color;
+			border-color: $il-standard-page-header-bg-color;
+			color: $gray;
+			outline: none;
+		}
+
+		span.caret {
+			display: none;
+		}
+	}
+
+	// mainbar
+	nav.il-maincontrols {
+		grid-column: 1;
+		grid-row: 3;
+		width: 100%;
+		z-index: $il-standard-page-zindex-maincontrols;
+	}
+
+	// Subgrid mainbar
+	.il-maincontrols-mainbar {
+		display: block;
+		width: 100%;
+	}
+
+	// mainbar
+	.il-mainbar {
+		background-color: $il-mainbar-btn-bg-color;
+		box-shadow: none;
+		display: flex;
+		max-height: $il-mainbar-small-btn-height;
+		overflow: hidden;
+		z-index: $il-standard-page-zindex-mainbar;
+	}
+
+	// tools section
+	.il-mainbar-tools-button {
+	    display: flex;
+	    flex-direction: row;
+	}
+
+	.il-mainbar-tools-button button {
+		height:$il-mainbar-small-btn-height;
+		width: $il-mainbar-small-btn-width;
+	}
+
+	.il-mainbar-tools-entries {
+		button {
+			height:$il-mainbar-small-btn-height;
+			width: $il-mainbar-small-btn-width;
+		}
+		&.engaged {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.il-mainbar-tools-entries-bg {
+		    height: $il-mainbar-small-btn-height;
+		}
+	}
+
+
+
+	// mainbar triggers
+	.il-mainbar-triggers {
+	}
+
+	// mainbar slates
+	.il-mainbar-slates {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	// mainbar close slates
+	.il-mainbar-close-slates {
+	}
+
+	// remove tools
+	.il-mainbar-remove-tool {
+		display: none;
+		.il-mainbar-tools-entries.engaged & {
+			display: block;
+		}
+	}
+
+	// content
+	main {
+		display: block;
+	}
+
+	.il-layout-page-content {
+		grid-column: 1;
+		grid-row: 2;
+		overflow: auto;
+	}
+}
