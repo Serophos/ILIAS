@@ -1,3 +1,28 @@
+// ui color setup
+
+$ui-main-color-1:			#4c6586;
+$ui-main-color-2:			#6ea03c;
+$ui-main-color-3:			#fa8228;
+
+$ui-base-color-light:		#ffffff;
+$ui-base-color-gray:		#999999;
+$ui-base-color-dark:		#000000;
+
+$ui-light-gray-1: 			lighten($ui-base-color-gray, 30%);
+$ui-light-gray-2:			lighten($ui-base-color-gray, 20%);
+$ui-light-gray-3:			lighten($ui-base-color-gray, 10%);
+$ui-mid-gray-1:				$ui-base-color-gray;
+$ui-mid-gray-2:				darken($ui-base-color-gray, 5%);
+$ui-mid-gray-3:				darken($ui-base-color-gray, 10%);
+$ui-dark-gray-1:			darken($ui-base-color-gray, 15%);
+$ui-dark-gray-2:			darken($ui-base-color-gray, 20%);
+$ui-dark-gray-3:			darken($ui-base-color-gray, 30%);
+
+$ui-text-color:				$ui-base-color-dark;
+$ui-text-color-light:		lighten($ui-text-color,30%);
+
+// *************************************
+// legacy colors
 $brand-primary:         #4c6586;
 $brand-secondary:       #6ea03c;
 $brand-success:         #6ea03c;
@@ -5,9 +30,10 @@ $brand-info:            #dcb496;
 $brand-warning:         #fa8228;
 $brand-danger:          #fa8228;
 
+
 $mid-gray: #434343;
-$il-primary-container-bg: white;
-$il-secondary-container-bg: #f9f9f9;
+$il-primary-container-bg: $ui-base-color-light;
+$il-secondary-container-bg: darken($ui-base-color-light,3%) // old: #f9f9f9;
 
 $il-highlight-bg: #dfe3e6;
 /* $il-highlight-bg: saturate(lighten($brand-warning, 34%), 80%); */
@@ -68,44 +94,44 @@ $il-light-text-color:   lighten($mid-gray, 30%); //#909090
 $link-color:            lighten($brand-primary, 5%);
 $link-hover-color:      darken($link-color, 15%);
 
-$component-active-color: white;
-$btn-primary-color: white;
-$btn-success-color: white;
-$btn-info-color: white;
-$btn-warning-color: white;
-$btn-danger-color: white;
-$input-bg: white;
+$component-active-color: $ui-base-color-light;
+$btn-primary-color: $ui-base-color-light;
+$btn-success-color: $ui-base-color-light;
+$btn-info-color: $ui-base-color-light;
+$btn-warning-color: $ui-base-color-light;
+$btn-danger-color: $ui-base-color-light;
+$input-bg: $ui-base-color-light;
 
-$navbar-inverse-link-hover-color: white;
-$navbar-inverse-brand-hover-color: white;
-$navbar-inverse-toggle-icon-bar-bg: white;
+$navbar-inverse-link-hover-color: $ui-base-color-light;
+$navbar-inverse-brand-hover-color: $ui-base-color-light;
+$navbar-inverse-toggle-icon-bar-bg: $ui-base-color-light;
 
-$nav-open-link-hover-color: white;
+$nav-open-link-hover-color: $ui-base-color-light;
 
-$pagination-bg: white;
-$pagination-active-color: white;
-$pagination-disabled-bg: white;
+$pagination-bg: $ui-base-color-light;
+$pagination-active-color: $ui-base-color-light;
+$pagination-disabled-bg: $ui-base-color-light;
 
-$popover-bg: white;
-$popover-arrow-color: white;
+$popover-bg: $ui-base-color-light;
+$popover-arrow-color: $ui-base-color-light;
 
-$label-color: white;
-$label-link-hover-color: white;
+$label-color: $ui-base-color-light;
+$label-link-hover-color: $ui-base-color-light;
 
-$modal-content-bg: white;
+$modal-content-bg: $ui-base-color-light;
 $modal-backdrop-bg: black;
 
-$progress-bar-color: white;
+$progress-bar-color: $ui-base-color-light;
 
-$list-group-bg: white;
+$list-group-bg: $ui-base-color-light;
 
-$panel-bg: white;
-$panel-primary-text: white;
+$panel-bg: $ui-base-color-light;
+$panel-primary-text: $ui-base-color-light;
 
-$carousel-control-color: white;
-$carousel-indicator-active-bg: white;
-$carousel-indicator-border-color: white;
-$carousel-caption-color: white;
+$carousel-control-color: $ui-base-color-light;
+$carousel-indicator-active-bg: $ui-base-color-light;
+$carousel-indicator-border-color: $ui-base-color-light;
+$carousel-caption-color: $ui-base-color-light;
 
-$close-text-shadow: 0 1px 0 white;
-$kbd-color: white;
+$close-text-shadow: 0 1px 0 $ui-base-color-light; //!mixin!
+$kbd-color: $ui-base-color-light;
