@@ -79,7 +79,7 @@ class ilStudyProgrammeMembersTableGUI extends ilTable2GUI
         string $parent_cmd = '',
         string $template_context = '',
         ilStudyProgrammeUserProgressDB $sp_user_progress_db,
-        ilStudyProgrammePostionBasedAccess $position_based_access
+        ilStudyProgrammePositionBasedAccess $position_based_access
     ) {
         $this->setId("sp_member_list");
         parent::__construct($parent_obj, $parent_cmd, $template_context);
@@ -415,9 +415,16 @@ class ilStudyProgrammeMembersTableGUI extends ilTable2GUI
                     $completion_id = $rec["completion_by_id"];
                     $title = ilContainerReference::_lookupTitle($completion_id);
                     $ref_id = ilContainerReference::_lookupTargetRefId($completion_id);
-                    $url = ilLink::_getStaticLink($ref_id, "crs");
-                    $lnk = $this->ui_factory->link()->standard($title, $url);
-                    $rec["completion_by"] = $this->ui_renderer->render($lnk);
+                    if (
+                        ilObject::_exists($ref_id, true) &&
+                        is_null(ilObject::_lookupDeletedDate($ref_id))
+                    ) {
+                        $url = ilLink::_getStaticLink($ref_id, "crs");
+                        $link = $this->ui_factory->link()->standard($title, $url);
+                        $rec["completion_by"] = $this->ui_renderer->render($link);
+                    } else {
+                        $rec["completion_by"] = $title;
+                    }
                 }
 
                 // If the status completed and there is a non-null completion_by field
@@ -507,7 +514,7 @@ class ilStudyProgrammeMembersTableGUI extends ilTable2GUI
     {
         $q = "WHERE prgrs.prg_id = " . $this->db->quote($prg_id, "integer") . PHP_EOL;
 
-        if ($this->prg->getAccessControlByOrguPositionsGlobal()) {
+        if ($this->prg->getAccessControlByOrguPositionsGlobal() && !$this->parent_obj->mayManageMembers()) {
             $visible = $this->getParentObject()->visibleUsers();
             if (count($visible) > 0) {
                 $q .= "	AND " . $this->db->in("prgrs.usr_id", $visible, false, "integer") . PHP_EOL;
@@ -617,7 +624,6 @@ class ilStudyProgrammeMembersTableGUI extends ilTable2GUI
         foreach ($this->filters as $item) {
             $f[$item->getFieldId()] = $this->getFilterValue($item);
         }
-
         return $f;
     }
 
@@ -655,14 +661,14 @@ class ilStudyProgrammeMembersTableGUI extends ilTable2GUI
 
         $exp_from = $filter['prg_expiry_date']['from'];
         if (!is_null($exp_from)) {
-            $dat = $exp_from->get(IL_CAL_DATETIME);
-            $buf[] = 'AND prgrs.vq_date >= \'' . $dat . '\'';
+            $dat = $exp_from->get(IL_CAL_DATE);
+            $buf[] = 'AND prgrs.vq_date >= \'' . $dat . ' 00:00:00\'';
         }
 
         $exp_to = $filter['prg_expiry_date']['to'];
         if (!is_null($exp_to)) {
-            $dat = $exp_to->get(IL_CAL_DATETIME);
-            $buf[] = 'AND prgrs.vq_date <= \'' . $dat . '\'';
+            $dat = $exp_to->get(IL_CAL_DATE);
+            $buf[] = 'AND prgrs.vq_date <= \'' . $dat . ' 23:59:59\'';
         }
 
         $conditions = implode(PHP_EOL, $buf);

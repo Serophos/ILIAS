@@ -124,3 +124,74 @@ $ilCtrlStructureReader->getStructure();
 <?php
 $ilCtrlStructureReader->getStructure();
 ?>
+
+<#14>
+<?php
+global $DIC;
+$ilDB = $DIC['ilDB'];
+
+if ($ilDB->tableColumnExists('iass_members', 'record')) {
+    $field_infos = [
+        'type' => 'clob',
+        'notnull' => false,
+        'default' => ''
+    ];
+    $ilDB->modifyTableColumn('iass_members', 'record', $field_infos);
+}
+
+if ($ilDB->tableColumnExists('iass_members', 'internal_note')) {
+    $field_infos = [
+        'type' => 'clob',
+        'notnull' => false,
+        'default' => ''
+    ];
+    $ilDB->modifyTableColumn('iass_members', 'internal_note', $field_infos);
+}
+
+if ($ilDB->tableColumnExists('iass_settings', 'content')) {
+    $field_infos = [
+        'type' => 'clob',
+        'notnull' => false,
+        'default' => ''
+    ];
+    $ilDB->modifyTableColumn('iass_settings', 'content', $field_infos);
+}
+
+if ($ilDB->tableColumnExists('iass_settings', 'record_template')) {
+    $field_infos = [
+        'type' => 'clob',
+        'notnull' => false,
+        'default' => ''
+    ];
+    $ilDB->modifyTableColumn('iass_settings', 'record_template', $field_infos);
+}
+
+if ($ilDB->tableColumnExists('iass_info_settings', 'mails')) {
+    $field_infos = [
+        'type' => 'clob',
+        'notnull' => false,
+        'default' => ''
+    ];
+    $ilDB->modifyTableColumn('iass_info_settings', 'mails', $field_infos);
+}
+?>
+
+<#15>
+<?php
+    $ilCtrlStructureReader->getStructure();
+?>
+
+<#16>
+<?php
+include_once('./Services/Migration/DBUpdate_3560/classes/class.ilDBUpdateNewObjectType.php');
+ilDBUpdateNewObjectType::addAdminNode('lsos', 'LearningSequenceAdmin');
+?>
+<#17>
+<?php
+$ilDB->manipulate(
+    "UPDATE il_cert_cron_queue SET adapter_class = " . $ilDB->quote('ilTestPlaceholderValues', 'text') . " WHERE adapter_class = " . $ilDB->quote('ilTestPlaceHolderValues', 'text')
+);
+$ilDB->manipulate(
+    "UPDATE il_cert_cron_queue SET adapter_class = " . $ilDB->quote('ilExercisePlaceholderValues', 'text') . " WHERE adapter_class = " . $ilDB->quote('ilExercisePlaceHolderValues', 'text')
+);
+?>
