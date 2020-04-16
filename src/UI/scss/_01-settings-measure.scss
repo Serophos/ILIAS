@@ -19,38 +19,25 @@ $il-standard-page-content-padding: 20px;
 $il-metabar-entry-height: 60px;
 $il-metabar-entry-width: 60px;
 $il-metabar-glyph-size: 2.3rem;
-
 $il-metabar-slates-width: 500px;
 
 //** breadcrumbs
 $il-standard-page-breadcrumbs-height: 33px;
 
-
 //** mainbar
-
 $il-mainbar-btn-height: 80px;
 $il-mainbar-btn-width: 80px;
-
-$il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
 $il-mainbar-btn-label-size: .9rem;
 $il-mainbar-bulky-label-margin-top: 5px;
-
 $il-mainbar-tools-item-gap: 3px;
 
 //** tools
 $il-mainbar-remove-tools-btn-height: 45px;
 
 //** modeinfo
-$il-mode-info-color: $brand-warning;
-$il-mode-info-border: 3px solid $il-mode-info-color;
 $il-mode-info-height: 30px;
-$il-mode-info-shadow: 0px 2px 2px 0px rgba(128, 128, 128, 1);
-$il-mode-info-text-color: white;
 
 //** slates
-
-
-
 $il-slate-content-padding: 10px 20px;
 $il-slate-tree-padding: 4px 0;
 $il-slate-bulky-padding: 10px 40px 15px 10px;
@@ -60,15 +47,10 @@ $il-slate-bulky-glyph-margin-right: 5px;
 $il-slate-bulky-label-size: 1.5rem;
 $il-slate-content-spacing: 2px;
 $il-standard-page-slate-width: 329px;
-
 $il-mainbar-close-slate-btn-height: 45px;
 $il-metabar-close-slate-btn-height: 30px;
 
 //** shadows
-$il-standard-page-shadow-color: rgba(0,0,0,.1);
-$il-mainbar-shadow-right: 1px 3px 4px $il-standard-page-shadow-color;
-$il-mainbar-shadow-top: 0 0 4px $il-standard-page-shadow-color;
-$il-standard-page-header-shadow-bottom: 0 1px 2px $il-standard-page-shadow-color;
 
 //** for mobile (small devices)
 $il-standard-page-small-header-height: 45px;
@@ -100,53 +82,10 @@ $il-tree-node-vertical-spacing: 0px;
 
 //** Size of the font displayed inside a button
 $il-button-font-size: 	        $font-size-small;
-
-//** Text color of the standard button (most button instances)
-$il-btn-standard-color:           white;
-//** Background color of the standard button (most button instances)
-$il-btn-standard-bg:              $brand-primary;
-//** Border color of the standard button (most button instances)
-$il-btn-standard-border:          $brand-primary;
-
-//** Text color of the primary button (most important button on the screen)
-$il-btn-primary-color:           white;
-//** Background color of the primary button (most important button on the screen)
-$il-btn-primary-bg:              darken($brand-secondary, 10%);
-//** Border color of the primary button (most important button on the screen)
-$il-btn-primary-border:          darken($brand-secondary, 10%);
-
-//** Text color of inactive buttons
-$il-disabled-btn-color:          white;
-//** Background color of inactive buttons
-$il-disabled-btn-bg:             #b0b0b0;
-//** Border color of inactive buttons
-$il-disabled-btn-border:         #e0e0e0;
-
-$btn-default-color:             $link-color;
-$btn-default-border:            #d0d0d0;
-$btn-default-bg:                #fefefe;
-$disabled-btn-bg:               #b0b0b0;
-$disabled-btn-border:           #b0b0b0;
-$disabled-btn-color:            #e0e0e0;
-//** Background color for tags with relevance 5; by default, color is desaturated in steps of 20%.
-$btn-tag-bg:                    #75deea;
-$btn-tag-bg-relevance-verylow:  desaturate($btn-tag-bg, 80%);
-$btn-tag-bg-relevance-low:      desaturate($btn-tag-bg, 60%);
-$btn-tag-bg-relevance-middle:   desaturate($btn-tag-bg, 40%);
-$btn-tag-bg-relevance-high:     desaturate($btn-tag-bg, 20%);
-$btn-tag-bg-relevance-veryhigh: $btn-tag-bg;
-//** Foreground colors for tags; usually black/white depending on the background color
-$btn-tag-fg-relevance-verylow:  contrast(desaturate($btn-tag-bg, 80%));
-$btn-tag-fg-relevance-low:      contrast(desaturate($btn-tag-bg, 60%));
-$btn-tag-fg-relevance-middle:   contrast(desaturate($btn-tag-bg, 40%));
-$btn-tag-fg-relevance-high:     contrast(desaturate($btn-tag-bg, 20%));
-$btn-tag-fg-relevance-veryhigh: contrast($btn-tag-bg);
 //** Border radius of tags
 $btn-tag-border-radius: 3px;
 //** margin of tags
 $btn-tag-margin: 2px 4px 2px 0;
-
-$il-tab-focus-outline: 1px dotted $il-highlight-bg;
 
 //== Toggle Buttons
 //
@@ -155,22 +94,14 @@ $il-tab-focus-outline: 1px dotted $il-highlight-bg;
 //** The Toggle Button without the Switch
 $il-btn-toggle-height: 19px;
 $il-btn-toggle-padding: 25px;
-$il-btn-toggle-border: 1px solid;
-$il-btn-toggle-border-color: rgba(0,0,0,0.1);
 $il-btn-toggle-border-radius: 40px;
-$il-enabled-btn-toggle-bg: lighten($il-enabled-btn-toggle-switch-color, 30%);
-$il-disabled-btn-toggle-bg: lighten($il-disabled-btn-toggle-switch-color, 30%);
 
 //** The Switch of the Toggle Button
 $il-btn-toggle-switch-position-top: -4px;
 $il-btn-toggle-switch-size: 25px;
-$il-btn-toggle-switch-border-color: rgba(0,0,0,0.2);
 $il-btn-toggle-switch-transition: all 0.25s ease-in-out;
-$il-enabled-btn-toggle-switch-color: $brand-primary;
 $il-enabled-btn-toggle-switch-position-left: 53%;
-$il-disabled-btn-toggle-switch-color: #808080;
 $il-disabled-btn-toggle-switch-position-left: -6%;
-
 
 //== Breadcrumbs
 //
@@ -190,68 +121,7 @@ $breadcrumb-padding-vertical:   0;
 $breadcrumb-padding-horizontal: 15px;
 $il-breadcrumb-resp-padding-vertical: 0;
 $il-breadcrumb-resp-padding-horizontal: 5px;
-//** Breadcrumb background color
-$breadcrumb-bg:                 transparent;
-//** Breadcrumb text color
-$breadcrumb-color:               $link-color;
-//** Text color of current page in the breadcrumb
-$breadcrumb-active-color:        $link-hover-color;
-//** font-weight of breadcrumbs
-$breadcrumb-font-weight:        600;
-//** Textual separator for between breadcrumb elements
-$breadcrumb-separator:          "»";
 
-
-//== Badges
-//
-//##
-
-$badge-color:                 white;
-//** Linked badge text color on hover
-$badge-link-hover-color:      white;
-$badge-bg:                    darken($brand-warning, 10%);
-
-//** Badge text color in active nav link
-$badge-active-color:          white;
-//** Badge background color in active nav link
-$badge-active-bg:             darken($brand-warning, 10%);
-
-$badge-font-weight:           bold;
-$badge-line-height:           1;
-$badge-border-radius:         10px;
-
-
-
-//== Standard Form
-//
-//## Variables used to style the ILIAS standard form used e.g. in the "Settings"-Tab
-
-//** Textcolor used in the forms sections bodies
-$il-standard-form-color:    #808080;
-//** Textcolor used in the bylines (descriptions) of the input fields of a form
-$il-standard-form-byline-color:   lighten($il-standard-form-color, 10%);
-//** Textcolor used in the labels (identifiers) of the input fields of a form
-$il-standard-form-label-color:   darken($il-standard-form-color, 20%);
-//** Background color used in the
-$il-standard-form-bg: $il-primary-container-bg;
-//** Textsize used in the forms body
-$il-standard-form-font-size: $font-size-small;
-//** Textsize used in the bylines (descriptions) of the input fields of a form
-$il-standard-form-byline-font-size:    90%;
-
-//** Textcolor used in the forms header, the sections header and the footer
-$il-standard-form-header-color: lighten($il-standard-form-color, 10%);
-//** Background color used in the forms header, the sections header and the footer
-$il-standard-form-header-bg: $body-bg;
-//** Textsize color used in the forms header and the sections header
-$il-standard-form-header-font-size: $font-size-h3;
-//** Textsize color used in the form headers the section headers byline (description)
-$il-standard-form-header-byline-font-size: $font-size-small;
-//** Background color used for dependant groups (sub forms) in standard forms
-$il-standard-form-dependant-group-bg: darken($il-standard-form-bg, 2%);
-
-//** Minimal size of non-empty buttons inside forms
-$il-button-min-width-forms: 	  60px;
 
 //== Standard Filter
 //
@@ -266,12 +136,10 @@ $il-standard-filter-bar-btn-bulky-border-width: 0;
 $il-standard-filter-bar-glyph-padding: 0.3em;
 
 //** Input Fields Area
-$il-standard-filter-input-section-border: 1px solid #dddddd;
 $il-standard-filter-input-group-width: 100%;
 $il-standard-filter-input-group-height: 25px;
 $il-standard-filter-label-width: 30%;
 $il-standard-filter-input-remove-width: 10%;
-$il-standard-filter-font-color-disabled: #b0b0b0;
 
 //** Division with active inputs under Filter Bar
 $il-standard-filter-active-inputs-margin-left: 0;
@@ -290,50 +158,23 @@ $il-standard-filter-add-input-popover-list-button-width: 100%;
 //
 //## Variables used to style the ILIAS input fields (e.g. Text Inputs etc.)
 $input-border-radius: 0;
-$input-border: #CCCCCC;
-$input-border-focus: lighten($brand-primary, 20%);
 $ilFormInputFontSize: $font-size-small;
 $input-height-base: (floor(($il-standard-form-font-size * $line-height-base)) + ($padding-base-vertical * 2) + 2);
-$ilFormColor: #808080;
-$ilFormBgColor: #FDFDFD;
-$input-color-placeholder: lighten($gray-light, 30%);
 $il-textarea-height: (floor(4 * ($il-standard-form-font-size * $line-height-base)) + ($padding-base-vertical * 2) + 2);
-
-//** Tag Input
-$input-tag-color-disabled: #EEEEEE;
 
 //== Panels
 //
 //##
-
-$panel-bg:                    $il-secondary-container-bg;
 $panel-body-padding:          15px;
-$panel-heading-color:		  #707070;
 $panel-heading-padding:       1.5*$padding-large-vertical $padding-large-horizontal;
 $panel-footer-padding:        $panel-heading-padding;
 $panel-border-radius:         $border-radius-base;
-
-//** Border color for elements within panels
-$panel-inner-border:          #ddd;
-$panel-footer-bg:             #f5f5f5;
-
-$panel-default-text:          $gray-dark;
 $panel-default-border:        none;
-$panel-default-heading-bg:    $il-secondary-container-bg;
-
-$panel-primary-text:          $gray-dark;
 $panel-primary-border:        none;
-$panel-primary-heading-bg:    $il-primary-container-bg;
 
 //== DropDowns
 //
 //##
-$dropdown-bg: white;
-$dropdown-link-color: lighten($mid-gray, 10%);
-$dropdown-link-hover-color: darken($gray-dark, 5%);
-$dropdown-link-bg: transparent;
-$dropdown-link-hover-bg: lighten($brand-primary, 53%);
-$dropdown-header-bg: #f3f3f3;
 
 //** determines display of icons in dropdowns, 'none' for no display and 'inline' for display
 $il-nav-icons:             inline;
@@ -347,69 +188,32 @@ $table-cell-padding:            8px;
 //** Padding for cells in `.table-condensed`.
 $table-condensed-cell-padding:  5px;
 
-//** Default background color used for all tables.
-$table-bg:                      transparent;
-//** Background color used for `.table-striped`.
-$table-bg-accent:               white;
-
-//** Border color for table and cell borders.
-$table-border-color:            #ddd;
-
-$il-table-head-bg:             	lighten($il-secondary-container-bg, 1%);
-$il-data-table-bg:             	$il-secondary-container-bg;
-$il-table-cmd-bg:				$il-secondary-container-bg;
-
-//** Presentation Table borders
-$il-table-presentation-rowborder-top: 1px solid $table-border-color; ;
-
 //** Presentation Table colum widths
 $il-table-presentation-rowcontrol-colwidth: 5%;
 $il-table-presentation-contents-colwidth: 95%;
-
-$il-table-presentation-details-viewcontrols-bg-color: lighten($brand-primary,50%);
-$il-table-presentation-details-viewcontrols-btn-color: $brand-primary;
-$il-table-presentation-details-viewcontrols-btn-bg: white;
 
 //== Toolbar
 //
 //##
 $navbar-height: 40px;
 $il-toolbar-margin: 15px; // Margin between toolbar items
-$il-toolbar-bg: $il-secondary-container-bg;
 $il-toolbar-height: $navbar-height;
-$il-toolbar-border: 1px solid #d8d8d8;
-
 
 //== Postings
 //
 //##
-$il-posting-by-moderator-bg: #ff9;
-$il-posting-needs-moderation-bg: #ffe4e4;
+
 
 //== bootstrap date time picker (/Services/Calendar/)
 //
 //##
 $bs-datetimepicker-timepicker-font-size: 1.2em;
-$bs-datetimepicker-active-bg: $btn-primary-bg;
-$bs-datetimepicker-active-color: $btn-primary-color;
 $bs-datetimepicker-border-radius: $border-radius-base;
-$bs-datetimepicker-btn-hover-bg: $gray-lighter;
-$bs-datetimepicker-disabled-color: $gray-light;
-$bs-datetimepicker-alternate-color: $gray-light;
-$bs-datetimepicker-secondary-border-color: #ccc;
-$bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2);
-$bs-datetimepicker-primary-border-color: white;
-$bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 
 
 //== Glyph
 //
 //##
-$il-glyph-color: $link-color;
-$il-glyph-hover-color: $link-hover-color;
-$il-glyph-highlighted-color: $brand-warning;
-$il-glyph-highlighted-hover-color:  darken($brand-warning, 15%);
-$il-glyph-disabled-color: #e0e0e0;
 
 
 //== Counter
@@ -423,14 +227,13 @@ $il-counter-margin-left: -4px;
 //== Status Counter
 //
 //##
-$il-counter-status-bg: lighten($mid-gray, 40%);
 $il-counter-status-margin-top: 10px;
 
 
 //== Novelty Counter
 //
 //##
-$il-counter-novelty-bg: $brand-warning;
+
 $il-counter-novelty-margin-top: -5px;
 
 
@@ -438,22 +241,9 @@ $il-counter-novelty-margin-top: -5px;
 //
 //## Customizes the Drozpones component
 
-//** Default background color used for dropzones.
-$il-dropzone-bg: white;
-$il-dropzone-bg-inactive: #F4F4F4;
-//** Background color used when a dropzone is highlighted (not when hovered).
-$il-dropzone-highlight-bg: #FFFFD6;
-//** Background color used when a dropzone is hovered.
-$il-dropzone-hover-bg: #FFF9BC;
 $il-dropzone-border-radius: 0px;
 $il-dropzone-border-style: dashed;
 $il-dropzone-border-width: 1px;
-//** Default border color
-$il-dropzone-border-color: #9C9C9C;
-//** Border color used when a dropzone is hovered.
-$il-dropzone-border-color-hover: #606060;
-//** Border of one file after dragging them to the dropzone
-$il-dropzone-filelist-border-color: $il-dropzone-border-color;
 $il-dropzone-filelist-border-type: solid;
 $il-dropzone-filelist-border-width: $il-dropzone-border-width;
 $il-dropzone-filelist-border-radius: $il-dropzone-border-radius;
@@ -469,16 +259,8 @@ $il-popover-min-width: 50px;
 $il-popover-min-height: 32px;
 //** Maximal width of the Popover
 $il-popover-max-width: 400px;
-//** Background color of the Popover
-$il-popover-background-color: $il-primary-container-bg;
-//** Background color of the title
-$il-popover-title-background-color: $il-popover-background-color;
-//** Border color of the Popover
-$il-popover-border-color: rgba(0, 0, 0, .2);
 //** Width of the arrow pointing from the Popover to its Triggerer component, e.g. a Button
 $il-popover-arrow-width: 10px;
-//** Background color of the arrow
-$il-popover-arrow-background-color: $il-popover-background-color;
 //** z-index used for the Popover
 $il-popover-z-index: 9999;
 //** Maximum Height of a popover (overflow scroll)
@@ -488,12 +270,7 @@ $il-popover-max-height: 500px;
 //== Tooltips
 //
 //## Tooltips displayed by the online help
-//** Text color of those tooltips
-$il-tooltip-color:		  white;
-//** Background color of those tooltips
-$il-tooltip-bg-color:	  lighten($brand-primary, 10%);
-//** Border color of those tooltips
-$il-tooltip-border-color: lighten($brand-primary, 10%);
+
 //** Border radius of those tooltips
 $il-tooltip-border-radius: 4px;
 //** Shadow of those tooltips
@@ -503,11 +280,7 @@ $il-tooltip-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
 //== Divider
 //
 //##
-$il-divider-bg: darken($il-secondary-container-bg, 5%);
 
-$il-divider-color: lighten($text-color, 10%);
-
-$il-divider-color: lighten($text-color, 10%);
 
 //== Item
 //
@@ -527,10 +300,6 @@ $il-item-border-bottom-small: 1px solid $body-bg;
 //
 //## Charts are used to graphically represent data in various forms such as maps, graphs or diagrams.
 
-$il-chart-item-active-bg: $brand-primary;
-$il-chart-item-active-color: white;
-$il-chart-item-inactive-bg: #e0e0e0;
-$il-chart-item-inactive-color: $il-light-text-color;
 $il-chart-item-space: 2px;
 
 //** Progress Meter: minimal width
@@ -543,24 +312,6 @@ $il-chart-progressmeter-bg-stroke-width: 6;
 $il-chart-progressmeter-multi-stroke-width: ($il-chart-progressmeter-mini-bg-stroke-width / 3);
 //** Progress Meter: single bar progress stroke width
 $il-chart-progressmeter-mono-stroke-width: ($il-chart-progressmeter-mini-bg-stroke-width - 1);
-//** Progress Meter: background color
-$il-chart-progressmeter-bg-color: #dddddd;
-//** Progress Meter: marker color
-$il-chart-progressmeter-marker-color: #efefef;
-//** Progress Meter: marker border color
-$il-chart-progressmeter-marker-shadow-color: #bcbcbc;
-//** Progress Meter main bar: success color
-$il-chart-progressmeter-success: #6ea03c;
-//** Progress Meter main bar: no-success color
-$il-chart-progressmeter-no-success: #d9534f;
-//** Progress Meter comparision bar: no-user-score color
-$il-chart-progressmeter-not-active: #f0ad4e;
-//** Progress Meter comparision bar: user-score color
-$il-chart-progressmeter-active: #aaaaaa;
-//** Progress Meter score text color
-$il-chart-progressmeter-score-text-color: #000000;
-//** Progress Meter info-text color
-$il-chart-progressmeter-info-text-color: #bcbcbc;
 
 //** Progress Meter Fixed-Size: width
 $il-chart-progressmeter-fixed-size: 350px;
@@ -575,14 +326,7 @@ $il-chart-progressmeter-mini-bg-stroke-width: 5;
 $il-chart-progressmeter-mini-stroke-width: $il-chart-progressmeter-mini-bg-stroke-width;
 //** Progress Meter Mini: marker stroke width
 $il-chart-progressmeter-mini-marker-stroke-width: 4;
-//** Progress Meter Mini: background color
-$il-chart-progressmeter-mini-bg-color: #dddddd;
-//** Progress Meter Mini: marker color
-$il-chart-progressmeter-mini-marker-color: #bcbcbc;
-//** Progress Meter Mini: progress stroke color (no success)
-$il-chart-progressmeter-mini-no-success: #d9534f;
-//** Progress Meter Mini: progress stroke color (success)
-$il-chart-progressmeter-mini-success: #6ea03c;
+
 
 //== Icons
 //
@@ -600,12 +344,6 @@ $icon-size-large: 45px;
 $il-standard-icon-path: $background-images-path;
 //** Path for standard icons in ILIAS
 $il-standard-outlined-icon-path: "${il-standard-icon-path}outlined/";
-//** Standard filter for the outlined icons to be used (rendering them with a black outline). This may be different in each context.
-$il-standard-outlined-icon-filter: brightness(0);
-//** Standard filter for the outlined icons to be used if disabled (rendering them with a grey outline).
-$il-standard-disabled-icon-filter: grayscale(100%);
-//** Standard filter for the outlined icons to be used if disabled (rendering them with a grey outline).
-$il-standard-outlined-disabled-icon-filter: contrast(0%);
 
 //== Avatar
 //
@@ -618,10 +356,7 @@ $avatar-border-radius: 50%;
 //** border size for letter avatars
 $avatar-border-size: 2px;
 $avatar-small-border-size: 0px;
-//** border style for letter avatars
-$avatar-border-style: solid;
-//** border color for picture avatars
-$avatar-picture-border-color: #dddddd;
+
 //** there are 26 colors for letter avatar backgrounds, this is for the abbreviation ant the border color
 $avatar-letter-border-color-contrast-lighten: 40%;
 $avatar-letter-border-color-contrast-darken: 20%;
@@ -629,30 +364,20 @@ $avatar-letter-border-color-contrast-darken: 20%;
 $avatar-letter-abbreviation-font-weight: lighter;
 //** change the abbreviations font transform
 $avatar-letter-abbreviation-font-transform: inherit;
-//** all variants of letter avatar background colors (MUST be 26)
-$avatar-letter-color-variants: #1abc9c, #16a085, #f1c40f, #f39c12, #2ecc71, #27ae60, #e67e22, #d35400, #3498db, #2980b9, #e74c3c, #c0392b, #9b59b6, #8e44ad, #bdc3c7, #34495e, #2c3e50, #95a5a6, #7f8c8d, #ec87bf, #d870ad, #f69785, #9ba37e, #b49255, #b49255, #a94136;
-
 
 //== View Control
 //
 //##
 $il-vc-glyph-padding-vertical: $padding-base-vertical+2;
 $il-vc-glyph-padding-horizontal: $padding-base-horizontal;
-$il-vc-glyph-hover-bg: lighten($brand-primary, 5%);
-$il-vc-mode-btn-active: $il-vc-glyph-hover-bg;
 
 
 //== Card
 //
 //##
 $il-card-border: none;
-$il-card-background: $il-secondary-container-bg;
-$il-card-highlight-bg: $brand-warning;
 $il-card-highlight-height: $padding-large-vertical;
-$il-card-list-key-color: $il-light-text-color;
-$il-card-repository-head-color: rgba(0,0,0,0.5);
 $il-card-repository-dropdown-border: #e0e0e0 1px solid;
-$il-card-repository-outlined-icon-filter: invert(1);
 $il-card-repository-outlined-disabled-icon-filter: $il-card-repository-outlined-icon-filter;
 //** Sets the maximum width of cards in small screens
 $il-card-max-width-xs: 350px;
@@ -662,9 +387,6 @@ $il-card-max-width-xs: 350px;
 //
 //##Workflow-steps have an icon indicating their status. The label changes color and size accordingly.
 $workflow-icon-size: 20px;
-$workflow-icon-font-color: white;
-$workflow-available-text-color: #333;
-$workflow-unavailable-text-color: #ddd;
 
 //== Message Boxes
 //
@@ -688,50 +410,35 @@ $grid-float-breakpoint-max: 768px;
 $il-standard-page-logo-height: 45px;
 $il-standard-page-logo-width: 45px;
 $il-standard-page-header-height: 60px;
-$il-standard-page-header-bg-color: #fff;
-$il-standard-page-border-light-color: #ddd;
 $il-standard-page-content-padding: 20px;
 
 //** metabar
 $il-metabar-entry-height: 60px;
 $il-metabar-entry-width: 60px;
 $il-metabar-glyph-size: 2.3rem;
-$il-metabar-glyph-color: #aaa;
 $il-metabar-slates-width: 500px;
 
 //** breadcrumbs
 $il-standard-page-breadcrumbs-height: 33px;
-$il-standard-page-breadcrumbs-bg-color: #fff;
-$il-standard-page-breadcrumbs-divider-color: #bbb;
 
 //** mainbar
-$il-maincontrols-mainbar-bg-color: #fff;
 $il-mainbar-btn-height: 80px;
 $il-mainbar-btn-width: 80px;
-$il-mainbar-btn-color: #fff;
-$il-mainbar-btn-bg-color: #4a4a4a;
-$il-mainbar-btn-color-engaged: #4a4a4a;
-$il-mainbar-btn-bg-color-engaged: #fff;
 $il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
 $il-mainbar-btn-label-size: .9rem;
 $il-mainbar-bulky-label-margin-top: 5px;
-$il-mainbar-tools-bg: $body-bg;
 $il-mainbar-tools-item-gap: 3px;
 
 //** tools
 $il-mainbar-remove-tools-btn-height: 45px;
 
 //** modeinfo
-$il-mode-info-color: $brand-warning;
 $il-mode-info-border: 3px solid $il-mode-info-color;
 $il-mode-info-height: 30px;
 $il-mode-info-shadow: 0px 2px 2px 0px rgba(128, 128, 128, 1);
-$il-mode-info-text-color: white;
+
 
 //** slates
-$il-slate-bulky-bg-color: #f2f2f2;
-$il-slate-bulky-level2-bg-color: #f9f9f9;
-$il-slate-bulky-bg-color-engaged: fade($brand-primary, 30%);
 $il-slate-content-padding: 10px 20px;
 $il-slate-tree-padding: 4px 0;
 $il-slate-bulky-padding: 10px 40px 15px 10px;
@@ -741,13 +448,10 @@ $il-slate-bulky-glyph-margin-right: 5px;
 $il-slate-bulky-label-size: 1.5rem;
 $il-slate-content-spacing: 2px;
 $il-standard-page-slate-width: 329px;
-$il-mainbar-slates-bg-color: #fff;
-$il-metabar-slates-bg-color: #fafafa;
 $il-mainbar-close-slate-btn-height: 45px;
 $il-metabar-close-slate-btn-height: 30px;
 
 //** shadows
-$il-standard-page-shadow-color: rgba(0,0,0,.1);
 $il-mainbar-shadow-right: 1px 3px 4px $il-standard-page-shadow-color;
 $il-mainbar-shadow-top: 0 0 4px $il-standard-page-shadow-color;
 $il-standard-page-header-shadow-bottom: 0 1px 2px $il-standard-page-shadow-color;
