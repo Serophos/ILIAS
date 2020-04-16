@@ -1,0 +1,14 @@
+$il-btn-toggle-switch-transition: all 0.25s ease-in-out;
+$bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+$il-tooltip-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+$il-standard-icon-path: $background-images-path;
+//** Path for standard icons in ILIAS
+$il-standard-outlined-icon-path: "${il-standard-icon-path}outlined/";
+$il-modal-transition-speed: 0.15s;
+$il-mode-info-shadow: 0px 2px 2px 0px rgba(128, 128, 128, 1);
+
+$il-standard-page-shadow-color: rgba(0,0,0,.1);
+$il-mainbar-shadow-right: 1px 3px 4px $il-standard-page-shadow-color;
+$il-mainbar-shadow-top: 0 0 4px $il-standard-page-shadow-color;
+$il-standard-page-header-shadow-bottom: 0 1px 2px $il-standard-page-shadow-color;

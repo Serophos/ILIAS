@@ -1,0 +1,24 @@
+// ui-border-setup
+
+$il-btn-standard-border:          $brand-primary;
+$il-btn-primary-border:          darken($brand-secondary, 10%);
+$btn-default-border:            #d0d0d0;
+$disabled-btn-border:           #b0b0b0;
+$il-tab-focus-outline: 1px dotted $il-highlight-bg;
+$il-btn-toggle-border: 1px solid;
+$il-btn-toggle-border-color: rgba(0,0,0,0.1);
+$il-btn-toggle-switch-border-color: rgba(0,0,0,0.2);
+$characteristic-value-border-color: #ddd;
+$il-disabled-btn-border:         #e0e0e0;
+$il-item-divider-border-bottom: dashed 0.5px #E0E0E0;
+$il-item-border-bottom: 2px solid $body-bg;
+$il-item-border-bottom-small: 1px solid $body-bg;
+$avatar-border-style: solid;
+$il-card-border: none;
+$il-card-repository-dropdown-border: #e0e0e0 1px solid;
+$il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
+$il-mode-info-border: 3px solid $il-mode-info-color;
+//** Input Fields Area
+$il-standard-filter-input-section-border: 1px solid #dddddd;
+$il-table-presentation-rowborder-top: 1px solid $table-border-color;
+$il-toolbar-border: 1px solid #d8d8d8;
