@@ -8,6 +8,8 @@ $ui-base-color-light:		#ffffff;
 $ui-base-color-gray:		#999999;
 $ui-base-color-dark:		#000000;
 
+$ui-bg-color:				darken($ui-base-color-light, 5%);;
+
 $ui-light-gray-1: 			lighten($ui-base-color-gray, 30%);
 $ui-light-gray-2:			lighten($ui-base-color-gray, 20%);
 $ui-light-gray-3:			lighten($ui-base-color-gray, 10%);
@@ -23,23 +25,23 @@ $ui-text-color-light:		lighten($ui-text-color,30%);
 
 // *************************************
 // legacy colors
-$brand-primary:         #4c6586;
-$brand-secondary:       #6ea03c;
+$brand-primary:         $ui-main-color-3; // #4c6586;
+$brand-secondary:       $ui-main-color-2; // #6ea03c;
 $brand-success:         #6ea03c;
 $brand-info:            #dcb496;
 $brand-warning:         #fa8228;
 $brand-danger:          #fa8228;
 
 
-$mid-gray: #434343;
+$mid-gray: $ui-mid-gray-3;
 $il-primary-container-bg: $ui-base-color-light;
-$il-secondary-container-bg: darken($ui-base-color-light,3%) // old: #f9f9f9;
+$il-secondary-container-bg: darken($ui-base-color-light,3%); // old: #f9f9f9;
 
 $il-highlight-bg: #dfe3e6;
 /* $il-highlight-bg: saturate(lighten($brand-warning, 34%), 80%); */
 /* $il-highlight-bg: lighten($brand-secondary, 44%); */
 /* $il-highlight-bg: lighten(#21c5d8, 40%); */
-$il-brand-3rd: #21c5d8;
+$il-brand-3rd: $ui-main-color-3;
 // Extended Colors
 //
 //## Extended Colors of ILIAS to be used to generate coloring for components like charts.
@@ -88,8 +90,8 @@ $il-extended-text-color-factor-darker: 60%;
 //== Scaffolding
 //
 //##
-$body-bg:               #f0f0f0;
-$text-color:            $gray-dark;
+$body-bg:               $ui-bg-color;
+$text-color:            $ui-base-color-dark;
 $il-light-text-color:   lighten($mid-gray, 30%); //#909090
 $link-color:            lighten($brand-primary, 5%);
 $link-hover-color:      darken($link-color, 15%);
