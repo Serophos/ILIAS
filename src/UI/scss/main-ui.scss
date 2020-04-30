@@ -4,35 +4,38 @@
 //
 // 01_settings
 // This is where all the global and brand variables stored
-@import '01-settings-globals';
+
 @import '01-settings-colors';
 @import '01-settings-fonts';
+// @import '01-settings-borders';
+// @import '01-settings-measure';
+
 
 // 02_dependencies
 // Helper snippets form external source
-@import '02-dependencies';
+// @import '02-dependencies';
 
 // 03_tools
 // This is where all the mixins and functions housed
-@import '03-tools-mixins';
+// @import '03-tools-mixins';
 
 // 04_layout
 // Cosmetic-free design patterns.
 // Layout can range from something as simple as a .wrapper element to layout systems.
-@import '04-layout';
+// @import '04-layout';
 
 // 05_elements
 // Unclassed HTML elements (type selectors) go here
-@import '05-elements/elements';
+// @import '05-elements/elements';
 
 // 06_components
 // Designed components, chunks of UI, go here
 @import '06-components-buttons';
-@import '06-components-tags';
-@import '06-components-toggles';
-@import '06-components-cards';
+// @import '06-components-tags';
+// @import '06-components-toggles';
+// @import '06-components-cards';
 
 // 07_hacks
 // This is the only place where !important declarations will be accepted.
 // This is the highest specificity layer includes the most explicit types of rules.
-@import '07-hacks';
+// @import '07-hacks';

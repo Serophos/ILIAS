@@ -24,18 +24,21 @@
 
 // mixins from standardpage.less
 // NOTE should be rewritten as @include with parameters
+/*
 .shadow-right {
-	box-shadow: @il-mainbar-shadow-right;
+	box-shadow: $il-mainbar-shadow-right;
 }
 
 .shadow-bottom {
-	box-shadow: @il-standard-page-header-shadow-bottom;
+	box-shadow: §il-standard-page-header-shadow-bottom;
 }
 
 .shadow-top {
-	box-shadow: @il-mainbar-shadow-top;
+	box-shadow: §il-mainbar-shadow-top;
 }
+*/
+
 // mixin for box-shadows
-@mixin box-shadow($offset-x:0, $offset-y:0, $blur-radius:0, $spread-radius:0 $shadow-color:$il-standard-page-shadow-color) {
+@mixin box-shadow($offset-x:0, $offset-y:0, $blur-radius:0, $spread-radius:0, $shadow-color:$il-standard-page-shadow-color) {
 	box-shadow: $offset-x $offset-y $blur-radius $spread-radius $shadow-color;
 }

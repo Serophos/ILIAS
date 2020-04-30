@@ -99,28 +99,3 @@ $web-font-path: "/templates/default/fonts/";
 	font-weight: 300;
 	font-style: normal;
 }
-
-//
-// ************************************
-// from less/variables.less
-// ************************************
-$badge-font-weight:           700 // bold;
-$badge-line-height:           1;
-$badge-border-radius:         10px; // !!!needs other place
-
-$breadcrumb-font-weight:        600;
-$breadcrumb-separator:          "»";
-
-$il-standard-form-font-size: $font-size-small;
-$il-standard-form-byline-font-size:    90%;
-$il-standard-form-header-font-size: $font-size-h3;
-$il-standard-form-header-byline-font-size: $font-size-small;
-$il-button-min-width-forms: 	  60px;
-
-$il-metabar-glyph-size: 2.3rem;
-$il-mainbar-btn-label-size: .9rem;
-
-$il-slate-bulky-glyph-size: 2rem;
-$il-slate-bulky-label-size: 1.5rem;
-$il-metabar-small-glyph-size: 2rem;
-$il-tree-node-indentation: $font-size-base;

@@ -1,9 +1,9 @@
-.btn {
+.ui-btn {
   font-size: $il-button-font-size;
 }
 
 //This is legacy for the old forms implementation. Can be removed as soon as the old implementation is removed.
-input.btn{
+input.ui-btn{
   display: inline-block;
   min-width: $il-button-min-width-forms;
   vertical-align: top;
@@ -13,15 +13,15 @@ input.btn{
   }
 }
 
-.btn-default {
-  @include button-variant($il-btn-standard-color; $il-btn-standard-bg; $il-btn-standard-border);
+.ui-btn-default {
+  @include button-variant($il-btn-standard-color, $il-btn-standard-bg, $il-btn-standard-border);
 }
 
-.btn-primary {
-  @include button-variant($il-btn-primary-color; $il-btn-primary-bg; $il-btn-primary-border);
+.ui-btn-primary {
+  @include button-variant($il-btn-primary-color, $il-btn-primary-bg, $il-btn-primary-border);
 }
 
-.btn, .btn.btn-tag{
+.ui-btn, .ui-btn.ui-btn-tag{
   &[disabled],
   fieldset[disabled] & {
     &,
@@ -71,47 +71,48 @@ a[disabled], a fieldset[disabled] & {
 .il-btn-month .dropdown-menu {
   min-width:250px;
 }
-.btn-tag {
+.ui-btn-tag {
     display: inline-block;
     white-space: nowrap;
     padding: $padding-xs-vertical $padding-xs-horizontal;
     margin: $btn-tag-margin;
     border-radius: $btn-tag-border-radius;
 
-	&.btn-tag-relevance-verylow {
+	&.ui-btn-tag-relevance-verylow {
 		background-color: $btn-tag-bg-relevance-verylow;
 		color: $btn-tag-fg-relevance-verylow;
 	}
-	&.btn-tag-relevance-low {
+	&.ui-btn-tag-relevance-low {
     background-color: $btn-tag-bg-relevance-low;
     color: $btn-tag-fg-relevance-low;
 	}
-	&.btn-tag-relevance-middle {
+	&.ui-btn-tag-relevance-middle {
     background-color: $btn-tag-bg-relevance-middle;
     color: $btn-tag-fg-relevance-middle;
 	}
-	&.btn-tag-relevance-high {
+	&.ui-btn-tag-relevance-high {
     background-color: $btn-tag-bg-relevance-high;
     color: $btn-tag-fg-relevance-high;
 	}
-	&.btn-tag-relevance-veryhigh {
+	&.ui-btn-tag-relevance-veryhigh {
     background-color: $btn-tag-bg-relevance-veryhigh;
     color: $btn-tag-fg-relevance-veryhigh;
 	}
 }
 
 // shy buttons
-.btn-link {
+.ui-btn-link {
 	padding: 0;
 	text-align: left;
 	white-space: normal;
 }
 
 // bulky buttons
-.btn-bulky {
+.ui-btn-bulky {
 	width: 100%
 }
 
+/*
 // button with loading animation
 .il-btn-with-loading-animation {
 	background-image: url("${background-images-path}loader.svg");
@@ -119,3 +120,4 @@ a[disabled], a fieldset[disabled] & {
 	background-position: right center;
 	padding-right: 18px;
 }
+*/
