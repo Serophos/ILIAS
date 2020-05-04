@@ -8,6 +8,8 @@ $ui-base-color-light:		#ffffff;
 $ui-base-color-gray:		#999999;
 $ui-base-color-dark:		#000000;
 
+$white: 					#ffffff;
+
 $ui-bg-color:				darken($ui-base-color-light, 5%);
 
 $ui-light-gray-1: 			lighten($ui-base-color-gray, 30%);
@@ -22,3 +24,15 @@ $ui-dark-gray-3:			darken($ui-base-color-gray, 30%);
 
 $ui-text-color:				$ui-base-color-dark;
 $ui-text-color-light:		lighten($ui-text-color,30%);
+
+// buttons
+$ui-btn-standard-color: 	$ui-main-color-1;
+$ui-btn-standard-bg: 		transparent;
+$ui-btn-standard-border:	$ui-main-color-1;
+$ui-btn-primary-color:		$white;
+$ui-btn-primary-bg: 		$ui-main-color-2;
+$ui-btn-primary-border: 	$ui-main-color-2;
+// should be managed by a added disabled class for all btn-variants
+$ui-disabled-btn-bg:	 	$ui-mid-gray-1;
+$ui-disabled-btn-border:	$ui-mid-gray-1;
+$ui-disabled-btn-color:		$white;

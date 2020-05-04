@@ -1,18 +1,18 @@
 // mixins
-
-@mixin box-size($width:100%, $height:100%) {
+/*
+$mixin box-size($width:100%, $height:100%) {
 	width: $width;
 	height: $height;
 }
 
-@mixin flex($direction:row, $break:nowrap, $alignWidth:center, $alignHeight:center) {
+$mixin flex($direction:row, $break:nowrap, $alignWidth:center, $alignHeight:center) {
 	display: flex;
 	flex-flow: $direction $break;
 	justify-content: $alignWidth;
 	align-items: $alignHeight;
 }
 
-@mixin clearfix() {
+$mixin clearfix() {
   content: ".";
   display: block;
   clear: both;
@@ -20,10 +20,10 @@
   height: 0;
 }
 
-// e.g. @include box(100%, auto)
+// e.g. $include box(100%, auto)
 
 // mixins from standardpage.less
-// NOTE should be rewritten as @include with parameters
+// NOTE should be rewritten as $include with parameters
 /*
 .shadow-right {
 	box-shadow: $il-mainbar-shadow-right;
@@ -37,6 +37,73 @@
 	box-shadow: §il-mainbar-shadow-top;
 }
 */
+
+// button variant mixin from bootstrap
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
 
 // mixin for box-shadows
 @mixin box-shadow($offset-x:0, $offset-y:0, $blur-radius:0, $spread-radius:0, $shadow-color:$il-standard-page-shadow-color) {

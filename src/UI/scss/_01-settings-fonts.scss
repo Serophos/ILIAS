@@ -99,3 +99,8 @@ $web-font-path: "/templates/default/fonts/";
 	font-weight: 300;
 	font-style: normal;
 }
+
+$font-size-base: 16px;
+
+// button component
+$ui-button-font-size: $font-size-base * 0.8;
